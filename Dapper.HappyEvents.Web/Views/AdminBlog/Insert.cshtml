@@ -1,0 +1,37 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model BlogDto
+@{
+    ViewData["Title"] = "Insert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h3 class="container">Blog Ekleme Sayfası</h3>
+
+    <form method="post">
+      
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Görsel</label>
+        <input type="text" class="form-control" asp-for="Image" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Yazar Görseli</label>
+        <input type="text" class="form-control" asp-for="WriterImage" />
+        <br />
+        <label>Yazar Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="WriterName" />
+        <br />
+        <label>Okuma Süresi</label>
+        <input type="text" class="form-control" asp-for="TimeRead" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+
+    </form>
+
+</div>
+

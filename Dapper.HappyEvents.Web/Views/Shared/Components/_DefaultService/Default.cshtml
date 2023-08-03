@@ -1,0 +1,42 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<ServiceDto>
+
+<section class="w3l-content-11-main position-relative">
+    <div class="content-design-11 py-5">
+        <div class="container py-md-5 py-4">
+            <h3 class="title-style text-center mb-md-5 mb-4">Sunduğumuz hizmetlerimiz</h3>
+            <div class="content-sec-11">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        
+                    
+                    <div class="col-lg-6">
+                        <div class="services-single d-flex p-sm-5 p-4">
+                            <div class="service-icon mr-sm-4 mr-3">
+                                <img src="@item.Icon" alt="" class="img-fluid">
+                            </div>
+                            <div class="services-content">
+                                <h5><a href="services.html">@item.Title</a></h5>
+                                <p>
+                                  @item.Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+              }
+                </div>
+          
+                <div class="mt-5 text-center">
+                    <a class="btn btn-style" href="services.html">Daha Fazla Hizmet</a>
+                </div>
+            </div>
+        </div>
+        <!-- balloon animation -->
+        <div class="circle">
+        </div>
+        <!-- balloon animation -->
+        <div class="animation-2">
+        </div>
+    </div>
+</section>

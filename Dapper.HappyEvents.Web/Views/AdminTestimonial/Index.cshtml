@@ -1,0 +1,49 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<TestimonialDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h3 class="container">Referanslar</h3>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Unvan</th>
+        <th>Yorum</th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>  @item.TestimonialID</th>
+            <td><img src="@item.Image" style="height:50px;width:50px" />  @item.Name</td>
+            <td>@item.Title</td>
+            <td>@item.Comment.Substring(0,30) ...</td>
+          
+
+
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.TestimonialID" class="btn btn-outline-danger"><i class="fas fa-trash"></i></a>
+                <a asp-action="Update" asp-route-id="@item.TestimonialID" class="btn btn-outline-dark"><i class="fas fa-pen"></i></a>
+            </td>
+        </tr>
+    }
+
+
+
+</table>
+<br />
+<div class="container">
+    <a asp-action="Insert" class="btn btn-primary">Yeni Referans Ekle</a>
+</div>
+
+
+

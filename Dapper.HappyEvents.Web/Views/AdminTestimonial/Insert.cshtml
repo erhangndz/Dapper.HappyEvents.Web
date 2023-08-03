@@ -1,0 +1,33 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model TestimonialDto
+@{
+    ViewData["Title"] = "Insert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="container">
+    <br />
+    <h3 class="container">Referans Ekleme Sayfası</h3>
+
+    <form method="post">
+
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Resim URL</label>
+        <input type="text" class="form-control" asp-for="Image" />
+        <br />
+        <label>Unvan</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Yorum</label>
+        <textarea type="text" class="form-control" asp-for="Comment" ></textarea>
+        <br />
+       
+        <button class="btn btn-primary">Kaydet</button>
+
+    </form>
+
+</div>

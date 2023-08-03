@@ -1,0 +1,30 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<FeatureDto>
+
+<section class="w3l-feature-8">
+    <div class="features-main py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row features text-center py-xl-2">
+           @foreach (var item in Model)
+                {
+                    
+                
+                <div class="col-lg-3 col-sm-6 feature-2 mt-sm-0 mt-5">
+                    <div class="feature-body">
+                        <div class="feature-images pb-sm-3 pb-1">
+                            <img src="@item.Icon" alt="" class="img-fluid">
+                        </div>
+                        <div class="feature-info mt-4">
+                            <a href="about.html">
+                                <h3 class="feature-titel">@item.Title</h3>
+                            </a>
+                            <p class="feature-text">@item.Description</p>
+                            <a href="about.html" class="btn btn-style btn-style-normal mt-4">@item.Subtitle</a>
+                        </div>
+                    </div>
+                </div>
+               }
+            </div>
+        </div>
+    </div>
+</section>

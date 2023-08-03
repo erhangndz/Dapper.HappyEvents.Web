@@ -1,0 +1,39 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<FeatureDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h3 class="container">Yaptıklarımız</h3>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Alt Başlık</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>  @item.FeatureID</th>
+            <td><img src="@item.Icon" style="height:50px;width:50px" />  @item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Subtitle</td>
+            <td> 
+                <a asp-action="Delete" asp-route-id="@item.FeatureID" class="btn btn-outline-danger" ><i class="fas fa-trash"></i></a>
+                <a asp-action="Update" asp-route-id="@item.FeatureID" class="btn btn-outline-dark" ><i class="fas fa-pen"></i></a>
+            </td>
+        </tr>
+    }
+
+
+
+</table>
+<br />
+<div class="container">
+<a asp-action="Insert" class="btn btn-primary">Yeni Yaptıklarımız Ekle</a>
+</div>

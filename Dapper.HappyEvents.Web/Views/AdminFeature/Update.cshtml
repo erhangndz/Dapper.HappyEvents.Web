@@ -1,0 +1,31 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model FeatureDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h3 class="container">Yaptıklarımız Düzenleme Sayfası</h3>
+
+    <form method="post">
+        <input type="hidden" asp-for="FeatureID" />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>İkon Görsel</label>
+        <input type="text" class="form-control" asp-for="Icon" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Alt Başlık</label>
+        <input type="text" class="form-control" asp-for="Subtitle" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+
+    </form>
+
+</div>
+

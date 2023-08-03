@@ -1,0 +1,70 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<BlogDto>
+
+
+<div class="blog-section py-5">
+    <div class="container py-md-5 py-4">
+        <div class="waviy text-center mb-md-5 mb-4">
+            <span style="--i:1">Y</span>
+            <span style="--i:2">e</span>
+            <span style="--i:3">n</span>
+            <span style="--i:4">i</span>
+            <span style="--i:5"></span>
+            <span style="--i:1">Y</span>
+            <span style="--i:2">a</span>
+            <span style="--i:3">z</span>
+            <span style="--i:4">ı</span>
+            <span style="--i:5">l</span>
+            <span style="--i:6">a</span>
+            <span style="--i:7">r</span>
+            <span style="--i:8"></span>
+            <span style="--i:2">&</span>
+            <span style="--i:3"></span>
+            <span style="--i:4">B</span>
+            <span style="--i:5">l</span>
+            <span style="--i:6">o</span>
+            <span style="--i:7">g</span>
+            <span style="--i:8">l</span>
+            <span style="--i:9">a</span>
+            <span style="--i:10">r</span>
+        </div>
+
+        <div class="row">
+
+
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#single">
+                                <img class="card-img-bottom d-block radius-image-full" src="@item.Image"
+                                     alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+                            <span class="label-blue">@item.Title</span>
+                            <a href="#single" class="blog-desc">
+                                @item.Description
+                            </a>
+                            <div class="author align-items-center mt-3 mb-1">
+                                <img src="@item.WriterImage" alt="" class="img-fluid rounded-circle" />
+                                <ul class="blog-meta">
+                                  
+                                        <a href="#single">@item.WriterName</a> 
+                                  
+                                    <li class="meta-item blog-lesson">
+                                        <span class="meta-value"> @item.Date </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> @item.TimeRead</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

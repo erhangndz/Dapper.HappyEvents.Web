@@ -1,0 +1,61 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<TeamDto>
+
+<section class="w3l-team-main" id="team">
+    <div class="team py-5">
+        <div class="container py-md-5 py-4">
+            <div class="waviy white-text text-center mb-sm-5 mb-4">
+                <span style="--i:1">Ç</span>
+                <span style="--i:2">a</span>
+                <span style="--i:3">l</span>
+                <span style="--i:4">ı</span>
+                <span style="--i:5">ş</span>
+                <span style="--i:6">m</span>
+                <span style="--i:7">a</span>
+                <span style="--i:8"></span>
+                <span style="--i:9">E</span>
+                <span style="--i:10">k</span>
+                <span style="--i:11">i</span>
+                <span style="--i:12">b</span>
+                <span style="--i:13">i</span>
+                <span style="--i:14">m</span>
+                <span style="--i:15">i</span>
+                <span style="--i:16">z</span>
+            </div>
+            <!-- fireworks effect -->
+            <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+            </div>
+            <div class="row team-row mt-md-5 mt-4">
+                @foreach (var item in Model)
+                {
+                    
+                
+                <div class="col-lg-3 col-6 team-wrap">
+                    <div class="team-member text-center">
+                        <div class="team-img">
+                            <img src="@item.Image" alt="" class="radius-image">
+                        </div>
+                        <a href="#url" class="team-title">@item.Name</a>
+                        <div class="team-details text-center">
+                            <div class="socials mt-20">
+                                <a href="@item.facebook">
+                                    <span class="fa fa-facebook-f"></span>
+                                </a>
+                                <a href="@item.twitter">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="@item.instagram">
+                                    <span class="fa fa-instagram"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        }
+                <!-- end team member -->
+            </div>
+        </div>
+    </div>
+</section>

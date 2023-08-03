@@ -1,0 +1,62 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model List<TestimonialDto>
+
+<section class="w3l-clients-1" id="testimonials">
+    <div class="cusrtomer-layout py-5">
+        <div class="container py-md-5 py-4">
+            <div class="waviy text-center mb-sm-5 mb-4">
+                <span style="--i:1">H</span>
+                <span style="--i:2">a</span>
+                <span style="--i:3">k</span>
+                <span style="--i:4">k</span>
+                <span style="--i:5">ı</span>
+                <span style="--i:6">m</span>
+                <span style="--i:7">ı</span>
+                <span style="--i:8">z</span>
+                <span style="--i:1">d</span>
+                <span style="--i:2">a</span>
+                <span style="--i:3"></span>
+                <span style="--i:4">S</span>
+                <span style="--i:5">ö</span>
+                <span style="--i:6">y</span>
+                <span style="--i:7">l</span>
+                <span style="--i:8">e</span>
+                <span style="--i:9">n</span>
+                <span style="--i:10">e</span>
+                <span style="--i:11">n</span>
+                <span style="--i:12">l</span>
+                <span style="--i:13">e</span>
+                <span style="--i:14">r</span>
+            </div>
+            <div class="testimonial-row">
+                <div id="owl-demo2" class="owl-two owl-carousel owl-theme mb-md-3 mb-sm-5 mb-4">
+                    @foreach (var item in Model)
+                    {
+                        
+                    
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>
+                                     @item.Comment
+                                    </q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <a href="#url" class="testi-img">
+                                        <img src="@item.Image" alt="" class="radius-image img-fluid">
+                                    </a>
+                                    <div class="peopl align-self">
+                                        <h3>@item.Name</h3>
+                                        <p class="identity">@item.Title </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

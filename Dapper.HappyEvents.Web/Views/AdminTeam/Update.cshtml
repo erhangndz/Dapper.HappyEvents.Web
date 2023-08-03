@@ -1,0 +1,35 @@
+﻿@using Dapper.HappyEvents.Application.Dtos;
+@model TeamDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h3 class="container">Çalışan Düzenleme Sayfası</h3>
+
+    <form method="post">
+        <input type="hidden" asp-for="TeamID" />
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Resim URL</label>
+        <input type="text" class="form-control" asp-for="Image" />
+        <br />
+        <label>Facebook URL</label>
+        <input type="text" class="form-control" asp-for="facebook" />
+        <br />
+        <label>Twitter URL</label>
+        <input type="text" class="form-control" asp-for="twitter" />
+        <br />
+        <label>Instagram URL</label>
+        <input type="text" class="form-control" asp-for="instagram" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+
+    </form>
+
+</div>
+
+
